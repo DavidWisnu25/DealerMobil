@@ -11,11 +11,10 @@ import javax.swing.table.AbstractTableModel;
 import model.Staff;
 
 /**
- 
- */
-/**
- *
- * @author VICTUS
+Kevin PK Wilson / A / 210711076
+Gabriel David Wisnu Dewangga / A / 210711097
+AG Arka Atmaja / A / 210711109
+Axel Christian Nugroho / A / 210711114
  */
 public class TableStaff extends AbstractTableModel{
     private List<Staff> list;

@@ -13,8 +13,10 @@ import model.Staff;
 import table.TableAdjuster;
 
 /**
- *
- * 
+Kevin PK Wilson / A / 210711076
+Gabriel David Wisnu Dewangga / A / 210711097
+AG Arka Atmaja / A / 210711109
+Axel Christian Nugroho / A / 210711114 
  */
 public class StaffView extends javax.swing.JInternalFrame {
 

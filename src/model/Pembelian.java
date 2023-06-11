@@ -9,15 +9,10 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * Nama : Reynold Kunarto 
- * NPM : 210711015
- * 
- * Nama : Febiola Ika Putri Wibowo
- * NPM : 210711023
- */
-/**
- *
- * @author VICTUS
+Kevin PK Wilson / A / 210711076
+Gabriel David Wisnu Dewangga / A / 210711097
+AG Arka Atmaja / A / 210711109
+Axel Christian Nugroho / A / 210711114
  */
 public class Pembelian {
     private int idPembelian;

@@ -11,15 +11,10 @@ import javax.swing.table.AbstractTableModel;
 import model.Pembelian;
 
 /**
- * Nama : Reynold Kunarto 
- * NPM : 210711015
- * 
- * Nama : Febiola Ika Putri Wibowo
- * NPM : 210711023
- */
-/**
- *
- * @author VICTUS
+Kevin PK Wilson / A / 210711076
+Gabriel David Wisnu Dewangga / A / 210711097
+AG Arka Atmaja / A / 210711109
+Axel Christian Nugroho / A / 210711114
  */
 public class TablePembelian extends AbstractTableModel{
     private List<Pembelian> list;
