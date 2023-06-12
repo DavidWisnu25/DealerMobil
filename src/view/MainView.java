@@ -44,6 +44,11 @@ public class MainView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        mainTab.setForeground(new java.awt.Color(255, 255, 255));
+
+        penjualanTab.setBackground(new java.awt.Color(212, 175, 185));
+        penjualanTab.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout penjualanTabLayout = new javax.swing.GroupLayout(penjualanTab);
         penjualanTab.setLayout(penjualanTabLayout);
         penjualanTabLayout.setHorizontalGroup(
@@ -56,6 +61,9 @@ public class MainView extends javax.swing.JFrame {
         );
 
         mainTab.addTab("Penjualan", penjualanTab);
+
+        kendaraanTab.setBackground(new java.awt.Color(209, 207, 226));
+        kendaraanTab.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout kendaraanTabLayout = new javax.swing.GroupLayout(kendaraanTab);
         kendaraanTab.setLayout(kendaraanTabLayout);
@@ -70,6 +78,9 @@ public class MainView extends javax.swing.JFrame {
 
         mainTab.addTab("Kendaraan", kendaraanTab);
 
+        customerTab.setBackground(new java.awt.Color(156, 173, 206));
+        customerTab.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout customerTabLayout = new javax.swing.GroupLayout(customerTab);
         customerTab.setLayout(customerTabLayout);
         customerTabLayout.setHorizontalGroup(
@@ -82,6 +93,9 @@ public class MainView extends javax.swing.JFrame {
         );
 
         mainTab.addTab("Customer", customerTab);
+
+        staffTab.setBackground(new java.awt.Color(126, 196, 207));
+        staffTab.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout staffTabLayout = new javax.swing.GroupLayout(staffTab);
         staffTab.setLayout(staffTabLayout);
@@ -96,6 +110,9 @@ public class MainView extends javax.swing.JFrame {
 
         mainTab.addTab("Staff", staffTab);
 
+        suplierTab.setBackground(new java.awt.Color(192, 192, 192));
+        suplierTab.setForeground(new java.awt.Color(255, 255, 255));
+
         javax.swing.GroupLayout suplierTabLayout = new javax.swing.GroupLayout(suplierTab);
         suplierTab.setLayout(suplierTabLayout);
         suplierTabLayout.setHorizontalGroup(
@@ -108,6 +125,9 @@ public class MainView extends javax.swing.JFrame {
         );
 
         mainTab.addTab("Suplier", suplierTab);
+
+        pembelianTab.setBackground(new java.awt.Color(193, 211, 254));
+        pembelianTab.setForeground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout pembelianTabLayout = new javax.swing.GroupLayout(pembelianTab);
         pembelianTab.setLayout(pembelianTabLayout);
@@ -126,11 +146,11 @@ public class MainView extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTab, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+            .addComponent(mainTab)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(mainTab)
+            .addComponent(mainTab, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
