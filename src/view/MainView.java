@@ -44,7 +44,8 @@ public class MainView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        mainTab.setForeground(new java.awt.Color(255, 255, 255));
+        mainTab.setForeground(new java.awt.Color(0, 0, 0));
+        mainTab.setFont(new java.awt.Font("Segoe UI Semibold", 0, 12)); // NOI18N
 
         penjualanTab.setBackground(new java.awt.Color(212, 175, 185));
         penjualanTab.setForeground(new java.awt.Color(255, 255, 255));
