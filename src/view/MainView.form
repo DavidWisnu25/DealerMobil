@@ -48,7 +48,7 @@
         <Container class="javax.swing.JPanel" name="penjualanTab">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="b9" green="af" red="d4" type="rgb"/>
+              <Color blue="fe" green="d3" red="c1" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -78,7 +78,7 @@
         <Container class="javax.swing.JPanel" name="kendaraanTab">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="e2" green="cf" red="d1" type="rgb"/>
+              <Color blue="cf" green="c4" red="7e" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -108,7 +108,7 @@
         <Container class="javax.swing.JPanel" name="customerTab">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ce" green="ad" red="9c" type="rgb"/>
+              <Color blue="fe" green="d3" red="c1" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -168,7 +168,7 @@
         <Container class="javax.swing.JPanel" name="suplierTab">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="c0" green="c0" red="c0" type="rgb"/>
+              <Color blue="fe" green="d3" red="c1" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -198,7 +198,7 @@
         <Container class="javax.swing.JPanel" name="pembelianTab">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="fe" green="d3" red="c1" type="rgb"/>
+              <Color blue="cf" green="c4" red="7e" type="rgb"/>
             </Property>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>

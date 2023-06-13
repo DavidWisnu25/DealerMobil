@@ -12,6 +12,7 @@ import javax.swing.table.TableModel;
 import model.Staff;
 import table.TableAdjuster;
 import Exception.inputKosongException;
+import Exception.gajiException;
 
 /**
 Kevin PK Wilson / A / 210711076
@@ -36,6 +37,19 @@ public class StaffView extends javax.swing.JInternalFrame {
         setTableStaff();
         setEditDelBtn(false);
     }
+    
+    public void inputKosongException() throws inputKosongException{
+        if(namaTxt.getText().isEmpty() || gajiTxt.getText().isEmpty()){
+            throw new inputKosongException();
+        }
+    }
+    
+    public void gajiException() throws gajiException{
+        float gaji = Float.parseFloat(gajiTxt.getText());
+        if(gaji<1000000){
+            throw new gajiException();
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -47,6 +61,7 @@ public class StaffView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         logoPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         containerPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableStaff = new javax.swing.JTable();
@@ -59,20 +74,27 @@ public class StaffView extends javax.swing.JInternalFrame {
         cleartBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 380));
 
         logoPanel.setBackground(new java.awt.Color(126, 196, 207));
         logoPanel.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/logoAutocarDealer.png"))); // NOI18N
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
         logoPanelLayout.setHorizontalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
+            .addGroup(logoPanelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         logoPanelLayout.setVerticalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 96, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoPanelLayout.createSequentialGroup()
+                .addContainerGap(29, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(24, 24, 24))
         );
 
         containerPanel.setBackground(new java.awt.Color(126, 196, 207));
@@ -101,7 +123,7 @@ public class StaffView extends javax.swing.JInternalFrame {
 
         addbtn.setBackground(new java.awt.Color(0, 204, 51));
         addbtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        addbtn.setForeground(new java.awt.Color(255, 255, 255));
+        addbtn.setForeground(new java.awt.Color(0, 0, 0));
         addbtn.setText("Tambah");
         addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,7 +133,7 @@ public class StaffView extends javax.swing.JInternalFrame {
 
         editBtn.setBackground(new java.awt.Color(255, 204, 51));
         editBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        editBtn.setForeground(new java.awt.Color(255, 255, 255));
+        editBtn.setForeground(new java.awt.Color(0, 0, 0));
         editBtn.setText("Edit");
         editBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -121,7 +143,7 @@ public class StaffView extends javax.swing.JInternalFrame {
 
         delBtn.setBackground(new java.awt.Color(255, 51, 51));
         delBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        delBtn.setForeground(new java.awt.Color(255, 255, 255));
+        delBtn.setForeground(new java.awt.Color(0, 0, 0));
         delBtn.setText("Hapus");
         delBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +167,7 @@ public class StaffView extends javax.swing.JInternalFrame {
 
         cleartBtn.setBackground(new java.awt.Color(153, 153, 255));
         cleartBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        cleartBtn.setForeground(new java.awt.Color(255, 255, 255));
+        cleartBtn.setForeground(new java.awt.Color(0, 0, 0));
         cleartBtn.setText("Clear");
         cleartBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,8 +181,8 @@ public class StaffView extends javax.swing.JInternalFrame {
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(containerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 650, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createSequentialGroup()
                         .addComponent(addbtn)
@@ -173,7 +195,7 @@ public class StaffView extends javax.swing.JInternalFrame {
                         .addComponent(jabatanDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(gajiTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(cleartBtn, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                .addContainerGap(47, Short.MAX_VALUE))
         );
 
         containerPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {gajiTxt, jabatanDropdown, namaTxt});
@@ -183,9 +205,12 @@ public class StaffView extends javax.swing.JInternalFrame {
         containerPanelLayout.setVerticalGroup(
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(containerPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGap(15, 15, 15)
                         .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(delBtn)
                             .addComponent(addbtn)
@@ -197,30 +222,28 @@ public class StaffView extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(gajiTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(cleartBtn)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE))
-                .addContainerGap())
+                        .addComponent(cleartBtn)))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(logoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(containerPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(logoPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(10, Short.MAX_VALUE)
+                .addContainerGap()
                 .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(containerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -229,6 +252,8 @@ public class StaffView extends javax.swing.JInternalFrame {
 
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         try{
+            gajiException();
+            inputKosongException();
             float gaji = Float.parseFloat(gajiTxt.getText());
             if(gaji>0){
                 Staff s = new Staff(namaTxt.getText(), (String) jabatanDropdown.getSelectedItem(), gaji);
@@ -238,6 +263,10 @@ public class StaffView extends javax.swing.JInternalFrame {
             }
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, nfe.getMessage());
+        }catch(gajiException ge){
+            JOptionPane.showMessageDialog(this, ge.message());
+        }catch(inputKosongException ke){
+            JOptionPane.showMessageDialog(this, ke.message());
         }
     }//GEN-LAST:event_addbtnActionPerformed
 
@@ -309,6 +338,7 @@ public class StaffView extends javax.swing.JInternalFrame {
     private javax.swing.JButton delBtn;
     private javax.swing.JButton editBtn;
     private javax.swing.JTextField gajiTxt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jabatanDropdown;
     private javax.swing.JPanel logoPanel;

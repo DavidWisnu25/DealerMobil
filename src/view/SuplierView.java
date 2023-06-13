@@ -35,6 +35,12 @@ public class SuplierView extends javax.swing.JInternalFrame {
         setTableSuplier();
         setEditDelBtn(false);
     }
+    
+    public void inputKosongException() throws inputKosongException{
+        if(namaTxt.getText().isEmpty()){
+            throw new inputKosongException();
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -46,110 +52,45 @@ public class SuplierView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         headerPanel = new javax.swing.JPanel();
-        delBtn = new javax.swing.JButton();
-        editBtn = new javax.swing.JButton();
-        addbtn = new javax.swing.JButton();
-        namaTxt = new javax.swing.JTextField();
-        cleartBtn = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
         containerPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableSuplier = new javax.swing.JTable();
+        delBtn = new javax.swing.JButton();
+        editBtn = new javax.swing.JButton();
+        addbtn = new javax.swing.JButton();
+        cleartBtn = new javax.swing.JButton();
+        namaTxt = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(810, 510));
 
-        headerPanel.setBackground(new java.awt.Color(102, 102, 102));
+        headerPanel.setBackground(new java.awt.Color(193, 211, 254));
         headerPanel.setForeground(new java.awt.Color(255, 255, 255));
 
-        delBtn.setBackground(new java.awt.Color(255, 51, 51));
-        delBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        delBtn.setForeground(new java.awt.Color(255, 255, 255));
-        delBtn.setText("Hapus");
-        delBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                delBtnActionPerformed(evt);
-            }
-        });
-
-        editBtn.setBackground(new java.awt.Color(255, 204, 51));
-        editBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        editBtn.setForeground(new java.awt.Color(255, 255, 255));
-        editBtn.setText("Edit");
-        editBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editBtnActionPerformed(evt);
-            }
-        });
-
-        addbtn.setBackground(new java.awt.Color(0, 204, 51));
-        addbtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        addbtn.setForeground(new java.awt.Color(255, 255, 255));
-        addbtn.setText("Tambah");
-        addbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addbtnActionPerformed(evt);
-            }
-        });
-
-        namaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        namaTxt.setText("Nama");
-
-        cleartBtn.setBackground(new java.awt.Color(153, 153, 255));
-        cleartBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
-        cleartBtn.setForeground(new java.awt.Color(255, 255, 255));
-        cleartBtn.setText("Clear");
-        cleartBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cleartBtnActionPerformed(evt);
-            }
-        });
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/logoAutocarDealer.png"))); // NOI18N
 
         javax.swing.GroupLayout headerPanelLayout = new javax.swing.GroupLayout(headerPanel);
         headerPanel.setLayout(headerPanelLayout);
         headerPanelLayout.setHorizontalGroup(
             headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
-                .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(addbtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(editBtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(delBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cleartBtn))
-                    .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addGap(217, 542, Short.MAX_VALUE)
-                        .addComponent(namaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(56, 56, 56))
+            .addGroup(headerPanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        headerPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addbtn, delBtn, editBtn});
-
         headerPanelLayout.setVerticalGroup(
             headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(headerPanelLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
-                .addComponent(namaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(headerPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(cleartBtn)
-                        .addContainerGap(30, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(headerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(addbtn)
-                            .addComponent(editBtn)
-                            .addComponent(delBtn))
-                        .addGap(19, 19, 19))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanelLayout.createSequentialGroup()
+                .addContainerGap(19, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18))
         );
 
-        containerPanel.setBackground(new java.awt.Color(192, 192, 192));
+        containerPanel.setBackground(new java.awt.Color(193, 211, 254));
 
-        tableSuplier.setBackground(new java.awt.Color(102, 102, 102));
-        tableSuplier.setForeground(new java.awt.Color(255, 255, 255));
+        tableSuplier.setBackground(new java.awt.Color(153, 153, 255));
+        tableSuplier.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        tableSuplier.setForeground(new java.awt.Color(0, 0, 0));
         tableSuplier.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -168,20 +109,89 @@ public class SuplierView extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tableSuplier);
 
+        delBtn.setBackground(new java.awt.Color(255, 51, 51));
+        delBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        delBtn.setForeground(new java.awt.Color(0, 0, 0));
+        delBtn.setText("Hapus");
+        delBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                delBtnActionPerformed(evt);
+            }
+        });
+
+        editBtn.setBackground(new java.awt.Color(255, 204, 51));
+        editBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        editBtn.setForeground(new java.awt.Color(0, 0, 0));
+        editBtn.setText("Edit");
+        editBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editBtnActionPerformed(evt);
+            }
+        });
+
+        addbtn.setBackground(new java.awt.Color(0, 204, 51));
+        addbtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        addbtn.setForeground(new java.awt.Color(0, 0, 0));
+        addbtn.setText("Tambah");
+        addbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addbtnActionPerformed(evt);
+            }
+        });
+
+        cleartBtn.setBackground(new java.awt.Color(153, 153, 255));
+        cleartBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        cleartBtn.setForeground(new java.awt.Color(0, 0, 0));
+        cleartBtn.setText("Clear");
+        cleartBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cleartBtnActionPerformed(evt);
+            }
+        });
+
+        namaTxt.setBackground(new java.awt.Color(153, 153, 255));
+        namaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
+        namaTxt.setForeground(new java.awt.Color(0, 0, 0));
+        namaTxt.setText("Nama");
+
         javax.swing.GroupLayout containerPanelLayout = new javax.swing.GroupLayout(containerPanel);
         containerPanel.setLayout(containerPanelLayout);
         containerPanelLayout.setHorizontalGroup(
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createSequentialGroup()
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+            .addGroup(containerPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createSequentialGroup()
+                        .addComponent(addbtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(editBtn)
+                        .addGap(18, 18, 18)
+                        .addComponent(delBtn))
+                    .addComponent(cleartBtn, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(namaTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31))
         );
+
+        containerPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {addbtn, delBtn, editBtn});
+
         containerPanelLayout.setVerticalGroup(
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(containerPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(31, 31, 31)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(addbtn)
+                            .addComponent(editBtn)
+                            .addComponent(delBtn))
+                        .addGap(42, 42, 42)
+                        .addComponent(namaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(57, 57, 57)
+                        .addComponent(cleartBtn)))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -190,14 +200,15 @@ public class SuplierView extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(headerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(headerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(headerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -209,10 +220,13 @@ public class SuplierView extends javax.swing.JInternalFrame {
 
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         try{
+            inputKosongException();
             Suplier s = new Suplier(namaTxt.getText());
             suplierControl.insertSuplier(s);
             setTableSuplier();
             clearAll();
+        }catch(inputKosongException ke){
+            JOptionPane.showMessageDialog(this, ke.message());
         }catch(Exception e){
             JOptionPane.showMessageDialog(rootPane, e.getMessage());
         }
@@ -281,6 +295,7 @@ public class SuplierView extends javax.swing.JInternalFrame {
     private javax.swing.JButton delBtn;
     private javax.swing.JButton editBtn;
     private javax.swing.JPanel headerPanel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField namaTxt;
     private javax.swing.JTable tableSuplier;

@@ -8,8 +8,8 @@ Axel Christian Nugroho / A / 210711114
 */
 
 
-public class inputKosongException extends Exception{
+public class gajiException extends Exception{
     public String message(){
-        return "FIELD INPUT TIDAK BOLEH KOSONG!";
+        return "Gaji Kurang dari Rp.1.000.000,00!";
     }
 }

@@ -70,6 +70,7 @@ public class PembelianView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         logoPanel = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
         header1Panel = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jumlahInput = new javax.swing.JSpinner();
@@ -98,23 +99,30 @@ public class PembelianView extends javax.swing.JInternalFrame {
         tablePembelian = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1028, 650));
 
-        logoPanel.setBackground(new java.awt.Color(193, 211, 254));
+        logoPanel.setBackground(new java.awt.Color(126, 196, 207));
         logoPanel.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/logoAutocarDealer.png"))); // NOI18N
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
         logoPanelLayout.setHorizontalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(logoPanelLayout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         logoPanelLayout.setVerticalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(logoPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jLabel5)
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        header1Panel.setBackground(new java.awt.Color(193, 211, 254));
+        header1Panel.setBackground(new java.awt.Color(126, 196, 207));
         header1Panel.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
@@ -127,13 +135,13 @@ public class PembelianView extends javax.swing.JInternalFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Total");
 
-        totalHargaTxt.setBackground(new java.awt.Color(153, 153, 255));
+        totalHargaTxt.setBackground(new java.awt.Color(204, 255, 255));
         totalHargaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         totalHargaTxt.setForeground(new java.awt.Color(0, 0, 0));
         totalHargaTxt.setHorizontalAlignment(javax.swing.JTextField.TRAILING);
         totalHargaTxt.setText("0");
 
-        confirmBtn.setBackground(new java.awt.Color(0, 153, 153));
+        confirmBtn.setBackground(new java.awt.Color(51, 204, 0));
         confirmBtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         confirmBtn.setForeground(new java.awt.Color(0, 0, 0));
         confirmBtn.setText("Confirm");
@@ -192,16 +200,16 @@ public class PembelianView extends javax.swing.JInternalFrame {
                 .addGap(34, 34, 34))
         );
 
-        header2Panel.setBackground(new java.awt.Color(193, 211, 254));
+        header2Panel.setBackground(new java.awt.Color(126, 196, 207));
         header2Panel.setForeground(new java.awt.Color(255, 255, 255));
 
-        suplierTab.setBackground(new java.awt.Color(153, 153, 255));
+        suplierTab.setBackground(new java.awt.Color(204, 255, 255));
         suplierTab.setForeground(new java.awt.Color(0, 0, 0));
 
-        suplierOld.setBackground(new java.awt.Color(153, 153, 255));
+        suplierOld.setBackground(new java.awt.Color(204, 255, 255));
         suplierOld.setForeground(new java.awt.Color(0, 0, 0));
 
-        suplierDropdown.setBackground(new java.awt.Color(193, 211, 254));
+        suplierDropdown.setBackground(new java.awt.Color(126, 196, 207));
         suplierDropdown.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         suplierDropdown.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -224,10 +232,10 @@ public class PembelianView extends javax.swing.JInternalFrame {
 
         suplierTab.addTab("Current", suplierOld);
 
-        suplierNew.setBackground(new java.awt.Color(153, 153, 255));
+        suplierNew.setBackground(new java.awt.Color(204, 255, 255));
         suplierNew.setForeground(new java.awt.Color(0, 0, 0));
 
-        namaSuplierTxt.setBackground(new java.awt.Color(193, 211, 254));
+        namaSuplierTxt.setBackground(new java.awt.Color(126, 196, 207));
         namaSuplierTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         namaSuplierTxt.setForeground(new java.awt.Color(0, 0, 0));
         namaSuplierTxt.setText("Nama");
@@ -255,13 +263,13 @@ public class PembelianView extends javax.swing.JInternalFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Suplier");
 
-        kendaraanTab.setBackground(new java.awt.Color(153, 153, 255));
+        kendaraanTab.setBackground(new java.awt.Color(204, 255, 255));
         kendaraanTab.setForeground(new java.awt.Color(0, 0, 0));
 
-        kendaraanOld.setBackground(new java.awt.Color(153, 153, 255));
+        kendaraanOld.setBackground(new java.awt.Color(204, 255, 255));
         kendaraanOld.setForeground(new java.awt.Color(0, 0, 0));
 
-        kendaraanDropdown.setBackground(new java.awt.Color(193, 211, 254));
+        kendaraanDropdown.setBackground(new java.awt.Color(126, 196, 207));
         kendaraanDropdown.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         kendaraanDropdown.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -284,24 +292,24 @@ public class PembelianView extends javax.swing.JInternalFrame {
 
         kendaraanTab.addTab("Current", kendaraanOld);
 
-        kendaraanNew.setBackground(new java.awt.Color(153, 153, 255));
+        kendaraanNew.setBackground(new java.awt.Color(204, 255, 255));
         kendaraanNew.setForeground(new java.awt.Color(0, 0, 0));
 
-        namaTxt.setBackground(new java.awt.Color(193, 211, 254));
+        namaTxt.setBackground(new java.awt.Color(126, 196, 207));
         namaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         namaTxt.setForeground(new java.awt.Color(0, 0, 0));
         namaTxt.setText("Nama");
 
-        merkTxt.setBackground(new java.awt.Color(193, 211, 254));
+        merkTxt.setBackground(new java.awt.Color(126, 196, 207));
         merkTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         merkTxt.setForeground(new java.awt.Color(0, 0, 0));
         merkTxt.setText("Merk");
 
-        jenisDropdown.setBackground(new java.awt.Color(193, 211, 254));
+        jenisDropdown.setBackground(new java.awt.Color(126, 196, 207));
         jenisDropdown.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         jenisDropdown.setForeground(new java.awt.Color(0, 0, 0));
 
-        hargaTxt.setBackground(new java.awt.Color(193, 211, 254));
+        hargaTxt.setBackground(new java.awt.Color(126, 196, 207));
         hargaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         hargaTxt.setForeground(new java.awt.Color(0, 0, 0));
         hargaTxt.setText("0");
@@ -371,14 +379,14 @@ public class PembelianView extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(header2PanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(kendaraanTab)
-                    .addComponent(suplierTab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(suplierTab))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        containerPanel.setBackground(new java.awt.Color(193, 211, 254));
+        containerPanel.setBackground(new java.awt.Color(126, 196, 207));
         containerPanel.setForeground(new java.awt.Color(255, 255, 255));
 
-        tablePembelian.setBackground(new java.awt.Color(153, 153, 255));
+        tablePembelian.setBackground(new java.awt.Color(204, 255, 255));
         tablePembelian.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         tablePembelian.setForeground(new java.awt.Color(0, 0, 0));
         tablePembelian.setModel(new javax.swing.table.DefaultTableModel(
@@ -429,6 +437,7 @@ public class PembelianView extends javax.swing.JInternalFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -506,6 +515,7 @@ public class PembelianView extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jenisDropdown;
     private javax.swing.JSpinner jumlahInput;

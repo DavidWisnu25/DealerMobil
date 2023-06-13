@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package model;
 
 import java.time.LocalDateTime;
@@ -14,6 +9,8 @@ Gabriel David Wisnu Dewangga / A / 210711097
 AG Arka Atmaja / A / 210711109
 Axel Christian Nugroho / A / 210711114
  */
+
+
 public class Pembelian {
     private int idPembelian;
     private int idSuplier;

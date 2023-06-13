@@ -37,6 +37,12 @@ public class KendaraanView extends javax.swing.JInternalFrame {
         setTableKendaraan();
         setEditDelBtn(false);
     }
+    
+    public void inputKosongException() throws inputKosongException{
+        if(namaTxt.getText().isEmpty() || merkTxt.getText().isEmpty() || hargaTxt.getText().isEmpty()){
+            throw new inputKosongException();
+        }
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,6 +54,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         logoPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         containerPanel = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableKendaraan = new javax.swing.JTable();
@@ -62,26 +69,33 @@ public class KendaraanView extends javax.swing.JInternalFrame {
         addbtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1000, 490));
 
-        logoPanel.setBackground(new java.awt.Color(209, 207, 226));
+        logoPanel.setBackground(new java.awt.Color(126, 196, 207));
         logoPanel.setForeground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/logo/logoAutocarDealer.png"))); // NOI18N
 
         javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
         logoPanel.setLayout(logoPanelLayout);
         logoPanelLayout.setHorizontalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 817, Short.MAX_VALUE)
+            .addGroup(logoPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         logoPanelLayout.setVerticalGroup(
             logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 102, Short.MAX_VALUE)
+            .addGroup(logoPanelLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel1)
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
-        containerPanel.setBackground(new java.awt.Color(209, 207, 226));
+        containerPanel.setBackground(new java.awt.Color(126, 196, 207));
         containerPanel.setForeground(new java.awt.Color(0, 0, 0));
 
-        tableKendaraan.setBackground(new java.awt.Color(192, 192, 192));
+        tableKendaraan.setBackground(new java.awt.Color(204, 255, 255));
         tableKendaraan.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         tableKendaraan.setForeground(new java.awt.Color(0, 0, 0));
         tableKendaraan.setModel(new javax.swing.table.DefaultTableModel(
@@ -102,12 +116,12 @@ public class KendaraanView extends javax.swing.JInternalFrame {
         });
         jScrollPane1.setViewportView(tableKendaraan);
 
-        namaTxt.setBackground(new java.awt.Color(192, 192, 192));
+        namaTxt.setBackground(new java.awt.Color(204, 255, 255));
         namaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         namaTxt.setForeground(new java.awt.Color(0, 0, 0));
         namaTxt.setText("Nama");
 
-        merkTxt.setBackground(new java.awt.Color(192, 192, 192));
+        merkTxt.setBackground(new java.awt.Color(204, 255, 255));
         merkTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         merkTxt.setForeground(new java.awt.Color(0, 0, 0));
         merkTxt.setText("Merek");
@@ -117,7 +131,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
             }
         });
 
-        jenisDropdown.setBackground(new java.awt.Color(192, 192, 192));
+        jenisDropdown.setBackground(new java.awt.Color(204, 255, 255));
         jenisDropdown.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         jenisDropdown.setForeground(new java.awt.Color(0, 0, 0));
 
@@ -133,7 +147,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
 
         jumlahInput.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
 
-        hargaTxt.setBackground(new java.awt.Color(192, 192, 192));
+        hargaTxt.setBackground(new java.awt.Color(204, 255, 255));
         hargaTxt.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         hargaTxt.setForeground(new java.awt.Color(0, 0, 0));
         hargaTxt.setText("Harga");
@@ -158,7 +172,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
             }
         });
 
-        addbtn.setBackground(new java.awt.Color(0, 153, 153));
+        addbtn.setBackground(new java.awt.Color(0, 255, 0));
         addbtn.setFont(new java.awt.Font("Franklin Gothic Demi", 0, 14)); // NOI18N
         addbtn.setForeground(new java.awt.Color(0, 0, 0));
         addbtn.setText("Tambah");
@@ -174,23 +188,24 @@ public class KendaraanView extends javax.swing.JInternalFrame {
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(containerPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 673, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(merkTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(namaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jenisDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jumlahInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(hargaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cleartBtn, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createSequentialGroup()
+                    .addGroup(containerPanelLayout.createSequentialGroup()
                         .addComponent(addbtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(editBtn)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(delBtn)))
+                        .addComponent(delBtn))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(merkTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(namaTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jenisDropdown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(hargaTxt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cleartBtn, javax.swing.GroupLayout.Alignment.TRAILING))
+                        .addComponent(jumlahInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -201,11 +216,9 @@ public class KendaraanView extends javax.swing.JInternalFrame {
         containerPanelLayout.setVerticalGroup(
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(containerPanelLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 242, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, containerPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGap(31, 31, 31)
                         .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(addbtn)
                             .addComponent(editBtn)
@@ -221,9 +234,11 @@ public class KendaraanView extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jumlahInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(cleartBtn)
-                        .addGap(18, 18, 18)))
-                .addContainerGap())
+                        .addComponent(cleartBtn))
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -256,6 +271,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
 
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         try{
+            inputKosongException();
             float harga = Float.parseFloat(hargaTxt.getText());
             int jumlah = (int) jumlahInput.getValue();
             if(harga>0 && jumlah>0){
@@ -266,6 +282,8 @@ public class KendaraanView extends javax.swing.JInternalFrame {
             }
         }catch(NumberFormatException nfe){
             JOptionPane.showMessageDialog(rootPane, nfe.getMessage());
+        }catch(inputKosongException ke){
+            JOptionPane.showMessageDialog(this, ke.message());
         }
     }//GEN-LAST:event_addbtnActionPerformed
 
@@ -340,6 +358,7 @@ public class KendaraanView extends javax.swing.JInternalFrame {
     private javax.swing.JButton delBtn;
     private javax.swing.JButton editBtn;
     private javax.swing.JTextField hargaTxt;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> jenisDropdown;
     private javax.swing.JSpinner jumlahInput;

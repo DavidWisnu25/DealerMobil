@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 package control;
 
 import dao.SuplierDAO;
@@ -11,14 +6,13 @@ import model.Suplier;
 import table.TableSuplier;
 
 /**
- 
- */
-/**
 Kevin PK Wilson / A / 210711076
 Gabriel David Wisnu Dewangga / A / 210711097
 AG Arka Atmaja / A / 210711109
 Axel Christian Nugroho / A / 210711114
  */
+
+
 public class SuplierControl {
     SuplierDAO sDao = new SuplierDAO();
     public void insertSuplier(Suplier s){
